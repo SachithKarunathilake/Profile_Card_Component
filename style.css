@@ -1,0 +1,127 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    height:100vh;
+    background-color:hsl(185, 75%, 39%);
+    font-family: 'Kumbh Sans', sans-serif;
+    overflow: hidden;
+}
+
+.top-circle{
+    z-index: -1;
+    position:absolute;
+    left:0%;
+    top:-50%;
+    max-height:100%;
+    max-width:50%;
+
+}
+.bottom-circle{
+    z-index: -2;
+    position:absolute;   
+    bottom:-55%;
+    right:0%;
+    max-height:100%;
+    max-width:50%;
+    
+}
+
+main{
+    width:350px;
+    height:376px;
+    border-radius:15px;
+    box-shadow:hsla(229, 21%, 44%, 0.3) 0px 15px 29px 2px;
+}
+
+.profile, .pattern-card{
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+}
+
+.profile{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color:#fff;
+}
+
+.pattern-card{
+    width: 100%;    
+}
+
+.victor-image{
+    width:108px;
+    height:108px;
+    border-radius:50%;
+    border:#fff solid 6px;
+    z-index: 2;
+    position:relative;
+    bottom:55px;
+}
+
+.profile h1, .profile p{
+    position:relative;
+    bottom:35px;
+}
+
+.profile h1{
+    font-size:18px;
+}
+
+.profile p{
+    margin:10px 0 0 0;
+    font-size:15px;
+    color:hsl(0, 0%, 59%);
+}
+
+.age{
+    color:hsl(0, 0%, 59%);
+    font-weight:300px;
+}
+
+.social{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    height:90px;
+    width:100%;
+    background-color: #fff;
+    border-top:solid 1px hsl(0, 2%, 84%);
+    padding:0 20px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+.followers, .likes, .photos{
+    flex:1;
+    text-align: center;
+}
+
+.social h1{
+    color:hsl(229, 23%, 23%);
+    font-size:18px;
+}
+
+.social p{
+    font-size:11px;
+    color:hsl(0, 0%, 59%);
+    letter-spacing: 1px;
+}
+
+@media(max-width:400px){
+    main{
+        margin:5%;
+        height:auto;
+    }
+
+    .top-circle, .bottom-circle{
+        display:none;
+    }
+}
